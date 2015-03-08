@@ -8,6 +8,7 @@
         <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400' rel='stylesheet' type='text/css'>-->
         <link rel="stylesheet" type="text/css" href="normalize.css">
         <link rel="stylesheet" type="text/css" href="estilos.css">
+
         <script type="text/javascript" src="prefixfree.min.js"></script>
     </head>
     <body>
@@ -19,7 +20,7 @@
         		Playa2015: Comunidad de personas diferentes
         	</h1>
         	<figure id="avatar">
-        	    <img src="avatar.jpg">
+        	    <!--<img src="avatar.jpg">-->
         	</figure>
         </header>
         <nav>
@@ -36,16 +37,18 @@
         </nav>
         <form action="" id="formulario" class="formulario">
             <!--<label for="titulo">Título:</label>-->
-            <input type="text" id="titulo" placeholder="Título" required />
+            <input type="text" id="titulo" nombre="titulo" placeholder="Título" required />
             <!--<label for="url">Url:</label>-->
-            <input type="url" id="url" placeholder="Url" required />
+            <input type="url" id="url" name="url" placeholder="Url" required />
             <input type="submit" value="Agregar" />
         </form>
         <aside>
+            <div id="clima"></div>
+            <dib id="geo"></div>
             <video width="320" height="240" controls autoplay />
-            <source src="videos/Playa2015.mp4" type="video/mp4"/>
-            <source src="videos/Playa2015.ogg" type="video/ogg"/>
-            Actualiza tu navegador 
+                <source src="videos/Playa2015.mp4" type="video/mp4"/>
+                <source src="videos/Playa2015.ogg" type="video/ogg"/>
+                Actualiza tu navegador 
             </video>
         </aside>
         <section id="contenido">
@@ -187,9 +190,12 @@
         	<p>
         		comunidad.playa 2015
         	</p>
+            <div class="logo"></div>
         </footer>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="formulario.js"></script>
+        <script type="text/javascript" src="geo.js"></script>
+        <script type="text/javascript" src="ajax.js"></script>
         <script>
             $(function()
             {         
