@@ -30,7 +30,7 @@
         		<li><a href="#">CSS3</a></li>
         		<li><a href="#">Django</a></li>
         		<li id="publicar_nav">
-        		    <a href="#" class="icon-lapiz" id="mostrar-form">Publicar</a>
+        		    <a href="#" data-nombre="Mario" class="icon-lapiz" id="mostrar-form">Publicar</a>
         		</li>
         	</ul>
         </nav>
@@ -46,7 +46,7 @@
             <source src="videos/Playa2015.mp4" type="video/mp4"/>
             <source src="videos/Playa2015.ogg" type="video/ogg"/>
             Actualiza tu navegador 
-        </video>
+            </video>
         </aside>
         <section id="contenido">
         	<article class="item">
@@ -190,5 +190,27 @@
         </footer>
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="formulario.js"></script>
+        <script>
+            $(function()
+            {         
+                $('#publicar_nav a').on('click', function(evento)
+                {
+                    evento.preventDefault();
+                    $(this).toggleClass('disabled');
+                    var data = $(this).data();
+                    $(this).data('apellido', 'Flores');
+                });
+
+                /*$('#publicar_nav a').on('click', function()
+                {
+                    if($(this).hasClass('disabled'))
+                    {
+                        $(this).removeClass('disabled');
+                    }else{
+                        $(this).addClass('disabled');
+                    }
+                });***Manera artesanal***/
+            });
+        </script>
     </body>
 </html>
